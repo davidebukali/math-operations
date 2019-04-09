@@ -1,0 +1,67 @@
+html, body 
+{
+    height: 100%;
+}
+
+.active{
+    background:#c8b500;
+}
+
+.left-sidebar  {
+    padding: 30px 40px 40px 40px;
+    background-color: #28353e;
+}
+
+.main-content {
+    padding: 30px 30px 0px 30px;    
+}
+
+.rounded_inputs {
+    border-radius: 20px;
+}
+
+label, h5 {
+    color: white;
+}
+
+.input-text, .form-control:focus
+{
+    color: #c8b500;
+    background-color: transparent;
+    border-color: #ffc107!important;
+}
+
+select {
+    background: transparent !important;
+}
+option:not(:checked), option:checked {
+    background-color: #28353e;
+    border-color: #ffc107!important;
+}
+
+.postAnswer, button.btn:hover, button.btn:visited, button.btn:focus, button.btn:active {
+    background-color: #a88818;
+    background: #a88818;
+    color: black;
+}
+
+.color-black {
+    color: black;
+}
+
+.dark-color {
+    background-color: #28353e;
+    color: #f0b700;
+}
+
+.failed {
+    background-color: #ffaea0;
+}
+
+.passed {
+    background-color: #ffe28a;
+}
+
+.closer {
+    cursor: pointer;
+}

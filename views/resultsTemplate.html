@@ -1,0 +1,30 @@
+<table class="table">
+<thead class="dark-color">
+    <tr>
+    <th scope="col">Number 1</th>
+    <th scope="col">Number 2</th>
+    <th scope="col">Response</th>
+    <th scope="col">Expected</th>
+    <th scope="col">Passed</th>
+    <th scope="col">Remove</th>
+    </tr>
+</thead>
+<tbody>
+    <tr ng-repeat="item in tableRows track by $index" class="{{ item.passed == 'Yes' ? 'passed' : 'failed' }}">
+    <td>{{ item.numberOne }}</td>
+    <td>{{ item.numberTwo }}</td>
+    <td>{{ item.apiResult }}</td>
+    <td>{{ item.clientResult }}</td>
+    <td>{{ item.passed }}</td>
+    <td data-index="{{$index}}"><img class='closer' src='img/close.png' width="25%" ng-click="removeRow($event)" /></td>
+    </tr>
+    <tr ng-hide="tableRows.length > 0">
+        <td></td>
+        <td></td>
+        <td><b>No Results</b></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</tbody>
+</table>

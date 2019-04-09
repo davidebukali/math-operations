@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" ng-app="webDev">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/app.css">
+
+    <title>Web Developer</title>
+
+</head>
+
+<body ng-controller="WebDevController">
+    <div class="container-fluid h-100">
+        <div class="row justify-content-center h-100">
+            <div class="left-sidebar mx-auto p-10 col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 hidden-md-down" id="yellow">
+                <h5>Numbers</h5>
+                <form>
+                    <div class="form-group">
+                        <label for="numberOne">Number One</label>
+                        <input type="number" class="input-text border-warning form-control rounded_inputs" name="numberOne" placeholder="Enter number one">
+                    </div>
+                    <div class="form-group">
+                        <label for="numberTwo">Number Two</label>
+                        <input type="number" class="input-text border-warning form-control rounded_inputs" name="numberTwo" placeholder="Enter number two">
+                    </div>
+                    <div class="form-group">
+                        <label for="operation">Operation</label>
+                        <select class="input-text border-warning form-control rounded_inputs" id="operation" ng-model="mathData.operation">
+                            <option value="add" class="operations">Add</option>
+                            <option value="sub" class="operations">Subtract</option>
+                            <option value="div" class="operations">Divide</option>
+                            <option value="mul" class="operations">Multiply</option>
+                        </select>
+                    </div>
+                    <button ng-click="post()" class="postAnswer border-warning btn btn-primary btn-block rounded_inputs">Post</button>
+                </form>
+            </div>
+            <div class="main-content col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <h5 class="color-black">Results</h5>
+                                            
+                    <results-table></results-table>
+                          
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+        <script src="libs/angular.min.js"></script>
+
+        <script src="libs/lodash.min.js"></script>
+
+        <script src="js/initializeAngularApp.js"></script>
+
+        <script src="js/factory/lodashFactory.js"></script>
+
+        <script src="js/factory/TableRowsFactory.js"></script>
+
+        <script src="js/services/httpRequests.js"></script>        
+
+        <script src="js/services/MathOperationService.js"></script>
+
+        <script src="js/directive/resultsTableDirective.js"></script>
+
+        <script src="js/directive/RemoveMeDirective.js"></script>
+
+        <script src="js/controllers/WebDevController.js"></script>
+
+</body>
+
+</html>
