@@ -21,10 +21,11 @@
         <div class="row justify-content-center h-100">
             <div class="left-sidebar mx-auto p-10 col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 hidden-md-down" id="yellow">
                 <h5>Numbers</h5>
-                <form>
+                <form name="myForm">
                     <div class="form-group">
                         <label for="numberOne">Number One</label>
-                        <input type="number" class="input-text border-warning form-control rounded_inputs" name="numberOne" placeholder="Enter number one">
+                        <input type="number" class="input-text border-warning form-control rounded_inputs" name="numberOne" placeholder="Enter number one" required>
+                        <span ng-show="myForm.numberOne.$touched && myForm.numberOne.$invalid">Number One is required.</span>
                     </div>
                     <div class="form-group">
                         <label for="numberTwo">Number Two</label>
@@ -39,7 +40,7 @@
                             <option value="mul" class="operations">Multiply</option>
                         </select>
                     </div>
-                    <button ng-click="post()" class="postAnswer border-warning btn btn-primary btn-block rounded_inputs">Post</button>
+                    <button ng-click="post($event)" class="postAnswer border-warning btn btn-primary btn-block rounded_inputs">Post</button>
                 </form>
             </div>
             <div class="main-content col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
